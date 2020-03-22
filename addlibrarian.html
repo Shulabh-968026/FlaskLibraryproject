@@ -1,0 +1,33 @@
+{% extends 'admintemplete.html' %}
+<head>
+<title>ADD Librarian form</title>
+<script src="../static/valid.js" type="text/javascript"></script>
+</head>
+<body style="font-size:36px; background-color:#FBD0DB">
+{% block m2 %}
+<form action="librarian" method="post" name="form1" onsubmit="return A(this)">
+<fieldset  style="width:500px; height:800px; margin-left:300px; margin-top:10px; border:solid 5px #CC9966; font-size:30px; padding-top:30px">
+   <legend>ADD LIBRARIAN</legend>
+   NAME:<br>
+   <input type="text" name="name" size="50px" required style=" background-color:#FBD0DB;height:30px;font-size:25px"><br><br>
+   PASSWORD:<br>
+   <input type="password" name="password" size="50px" id="t1"required style=" background-color:#FBD0DB;height:30px;font-size:25px"><br><br>
+   CONFORM PASSWORD:<br>
+   <input type="password" name="conformpassword" size="50px" id="t2" required style=" background-color:#FBD0DB;height:30px;font-size:25px"><br><br>
+   EMAIL:<br>
+   <input type="email" name="email" size="50px" required style=" background-color:#FBD0DB;height:30px;font-size:25px"><br><br>
+   ADDRESS:<br>
+   <input type="text" name="address" size="50px" style=" background-color:#FBD0DB;height:30px;font-size:25px"><br><br>
+   CITY:<br>
+   <input type="text" name="city" size="50px" pattern="[a-zA-Z]*" style=" background-color:#FBD0DB;height:30px;font-size:25px"><br><br>
+   CONTACT NO.:<br>
+   <input type="tel" name="contact" size="50px" pattern="[0-9]*" required style=" background-color:#FBD0DB;height:30px;font-size:25px"><br><br>
+   <input type="submit" name="submit" value="Add Librarian" style="width:170px; height:40px; background-color:#33F; border:solid 3px #3366FF; font-size:24px; margin-left:100px;"/>
+{% if msg %}
+    <h1 style="font-size:20px">{{ msg }}</h1>
+{% endif %}
+{% endblock %}
+   </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'hospitaltemplete.html' %}
+<html>
+<head>
+<title>ISSUE BOOKS</title>
+</head>
+<body  style="font-size:36px; background-color:#FBD0DB">
+{% block m3 %}
+<form action="issuebook" method="post">
+   {% if data %}
+   <h3>book is issue for {{ data }}</h3>
+   {% elif msg %}
+   <h1>{{ msg }}</h1>
+   {% endif %}
+<fieldset  style="width:500px; height:553px; margin-left:600px; margin-top:70px; border:solid 5px #CC9966; font-size:30px; padding-top:30px; background-color:transparent; font-style:oblique">
+   <legend>ISSUE BOOKS</legend>
+   BOOK ID:<br>
+   <input type="text" name="bookid" size="50px" required style="height:30px;font-size:25px"><br><br>
+   STUDENT ID:<br>
+   <input type="text" name="studentid" size="50px" required style="height:30px;font-size:25px"><br><br>
+   STUDENT NAME:<br>
+   <input type="text" name="studentname" size="50px"  style="height:30px;font-size:25px"><br><br>
+   STUDENT CONTACT:<br>
+   <input type="text" name="studentcontact" size="50px" style="height:30px;font-size:25px"><br><br>
+   Date:<br>
+   <input type="date" name="date" size="50px" required style="height:30px;font-size:25px"><br><br>
+   <input type="submit" name="submit" value="Issue Books" style="width:150px; height:40px; background-color:#33F; border:solid 3px #3366FF; font-size:24px; margin-left:100px;"/>
+</fieldset>
+</form>
+{% endblock %}
+</body>
+</html>

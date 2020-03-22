@@ -1,0 +1,45 @@
+{% extends 'admintemplete.html' %}
+<html>
+<head>
+    <title>view Librarian</title>
+    {% block m2 %}
+    <style>
+table, th, td {
+  border: 1px solid black;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+{% if data %}
+<table style="width:100%">
+       <thead>
+       <tr>
+         <th>Name</th>
+         <th>Password</th>
+         <th>Email</th>
+         <th>Address</th>
+         <th>City</th>
+         <th>Contact No.</th>
+       </tr>
+       </thead>
+   {% for d in data %}
+       <tdata>
+           <tr>
+               <td>{{ d[0] }}</td>
+               <td>{{ d[1] }}</td>
+               <td>{{ d[3] }}</td>
+               <td>{{ d[4] }}</td>
+               <td>{{ d[5] }}</td>
+               <td>{{ d[6] }}</td>
+           </tr>
+       </tdata>
+   {% endfor %}
+   </table>
+{% elif msg %}
+   <h1>{{ msg }}</h1>
+{% endif %}
+{% endblock %}
+</body>
+</html>

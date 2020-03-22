@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Hospital </title>
+<link href="../static/hospitaltemplate.css" rel="stylesheet" type="text/css">
+</head>
+<body style=" background-color:#FBD0DB">
+<div class="main">
+   <div class="wrapper">
+      <div class="header">
+      <h1>LIBRARIAN</h1>
+      </div>
+      <div class="menu">
+      <ul>
+      <li><a href="addbooks">Add Books</a></li>
+      <li><a href="viewbooks">view Books</a></li>
+      <li><a href="issuebook">Issue Books</a></li>
+      <li><a href="viewissbooks">View Issue Books</a></li>
+      <li><a href="returnbook">Return Book</a></li>
+      <li><a href="changepass">change Password</a></li>
+      <li><a href="logout">Log out</a></li>
+      </ul>
+      </div>
+      <div id="middle">
+         {% block m3 %}
+         {% endblock %}
+      </div>
+    <!--  <div class="footer">
+      <h1>copy right &copy;by Library 2019</h1>
+      </div>-->
+   </div>
+</div>
+</body>
+</html>

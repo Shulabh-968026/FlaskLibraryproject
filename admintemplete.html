@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Admin Detail</title>
+<link rel="stylesheet" href="../static/admintemplete.css" type="text/css">
+</head>
+<body style="background-color:#FBD0DB">
+<div id="main">
+   <div id="wrapper">
+      <div id="header">
+      <h1 id="logo">ADMIN </h1>
+      </div>
+      <div id="menu">
+      <ul>
+          <li><a href="librarian">Add Librarian</a></li>
+      <li><a href="viewlibrarian">Show Librarian</a></li>
+      <li><a href="editlibrarian">Edit Librarian</a></li>
+      <li><a href="deletelibrarian">Delete Librarian</a></li>
+          <li><a href="logout">Log out</a> </li>
+      </ul>
+     </div>
+      <div id="middle">
+          {% block m2 %}
+          {% endblock %}
+      </div>
+     <div id="foot">
+      <h1>copy right &copy; by Shulabh Dixit 2019</h1>
+      </div>  
+   </div>
+</div> 
+</body>
+</html>

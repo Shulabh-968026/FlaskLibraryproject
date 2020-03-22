@@ -1,0 +1,25 @@
+{% extends 'hospitaltemplete.html' %}
+<html>
+<head>
+    <title>Return Book</title>
+</head>
+<body  style="font-size:36px; background-color:#FBD0DB">
+{% block m3 %}
+<form action="returnbook" method="post">
+<fieldset  style="width:500px; height:400px; margin-left:300px; margin-top:10px; border:solid 5px #CC9966; font-size:30px; padding-top:30px">
+   <legend>ADD BOOKS</legend>
+   BOOK ID:<br>
+   <input type="text" name="bookid" size="50px" required style=" background-color:#FBD0DB;height:30px;font-size:25px"><br><br>
+   STUDENT ID:<br>
+   <input type="text" name="studentid" size="50px" required style=" background-color:#FBD0DB;height:30px;font-size:25px"><br><br>
+     <input type="submit" name="submit" value="Add Books" style="width:150px; height:40px; background-color:#33F; border:solid 3px #3366FF; font-size:24px; margin-left:100px;"/>
+     {% if data %}
+   <h3 style="font-size:20px">book is successfully return by {{ data }}</h3>
+   {% elif msg %}
+   <h1 style="font-size:20px">{{ msg }}</h1>
+   {% endif %}
+</fieldset>
+</form>
+{% endblock %}
+</body>
+</html>

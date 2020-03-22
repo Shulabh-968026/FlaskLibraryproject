@@ -1,0 +1,33 @@
+{% extends 'hospitaltemplete.html' %}
+<html>
+<head>
+<title>ADD BOOKS</title>
+</head>
+<body  style="font-size:36px; background-color:#FBD0DB">
+{% block m3 %}
+<form action="addbooks" method="post">
+<fieldset  style="width:500px; height:800px; margin-left:300px; margin-top:10px; border:solid 5px #CC9966; font-size:30px; padding-top:30px">
+   <legend>ADD BOOKS</legend>
+   BOOK ID:<br>
+   <input type="text" name="bookid" size="50px" required style="height:30px;font-size:25px"><br><br>
+   NAME:<br>
+   <input type="text" name="name" size="50px" required style="height:30px;font-size:25px"><br><br>
+   AUTHER:<br>
+   <input type="text" name="auther" size="50px"  style="height:30px;font-size:25px"><br><br>
+   PUBLISHER:<br>
+   <input type="text" name="publisher" size="50px" style="height:30px;font-size:25px"><br><br>
+   QUANTITY:<br>
+   <input type="text" name="quantity" size="50px" style="height:30px;font-size:25px"><br><br>
+   Issue Books:<br>
+   <input type="text" name="issuebooks" size="50px" style="height:30px;font-size:25px"><br><br>
+   Date:<br>
+   <input type="date" name="date" size="50px" style="height:30px;font-size:25px"><br><br>
+   <input type="submit" name="submit" value="Add Books" style="width:150px; height:40px; background-color:#33F; border:solid 3px #3366FF; font-size:24px; margin-left:100px;"/>
+   {% if msg %}
+   <h3>{{ msg }}</h3>
+   {% endif %}
+</fieldset>
+</form>
+{% endblock %}
+</body>
+</html>

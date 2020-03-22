@@ -1,0 +1,52 @@
+margin:0
+padding:0
+.main{
+	width:1550px;
+	height:1000px;
+	border:bold 5px #CC9933;
+	border-radius:5px;
+	
+}
+.wrapper{
+	float:left;
+	width:1510px;
+	height:1000px;
+	border:bold 5px #CC9999;
+	border-radius:5px;
+	background-image:url(photo-1452830978618-d6feae7d0ffa.jfif);
+	background-size:100%;
+}
+.header{
+	font-size:36px;
+	width:1510px;
+	height:100px;
+	font:"Lucida Sans Unicode", "Lucida Grande", "sans-serif";
+	border:bold 5px #003333;
+	border-radius:5px;
+}
+#head{
+	padding-left:140px;
+}
+.menu{
+	padding-top:0px;
+	float:left;
+	height:60px;
+	width:1510px;
+	border:bold 5px #000000;
+}
+ul{
+	margin-left:1270px;
+	list-style:none;
+	margin-top:0px;
+}
+ul li{
+	float:left;
+	text-align:center;
+	line-height:58px;
+	border:bold 2px black;
+}
+li a{
+	color:#C39;
+	text-decoration:none;
+	font-size:18px;
+}

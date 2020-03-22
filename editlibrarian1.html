@@ -1,0 +1,34 @@
+{% extends 'admintemplete.html' %}
+<html>
+<head>
+    <title>Edit Librarian</title>
+</head>
+<body>
+{% block m2 %}
+<form action="editlibrarian1" method="post" name="form1">
+    {% if data %}
+<fieldset  style="width:500px; height:800px; margin-left:300px; margin-top:10px; border:solid 5px #CC9966; font-size:30px; padding-top:30px">
+   <legend>ADD LIBRARIAN</legend>
+   NAME:<br>
+   <input type="text" name="name" value="{{ data[0] }} " size="50px" required style="height:30px;font-size:25px"><br><br>
+   PASSWORD:<br>
+   <input type="password" name="password" value="{{ data[1] }}" readonly size="50px" id="t1"required style="height:30px;font-size:25px"><br><br>
+   CONFORM PASSWORD:<br>
+   <input type="password" name="conformpassword" value="{{ data[2] }}" readonly size="50px" id="t2" required style="height:30px;font-size:25px"><br><br>
+   EMAIL:<br>
+   <input type="email" name="email" size="50px" value="{{ data[3] }}" required readonly style="height:30px;font-size:25px"><br><br>
+   ADDRESS:<br>
+   <input type="text" name="address" size="50px" value="{{ data[4] }}" style="height:30px;font-size:25px"><br><br>
+   CITY:<br>
+   <input type="text" name="city" size="50px" value="{{ data[5] }}" style="height:30px;font-size:25px"><br><br>
+   CONTACT NO.:<br>
+   <input type="text" name="contact" size="50px" value="{{ data[6] }}" required style="height:30px;font-size:25px"><br><br>
+   <input type="submit" name="submit" value="change save" style="width:170px; height:40px; background-color:#33F; border:solid 3px #3366FF; font-size:24px; margin-left:100px;"/>
+</fieldset>
+    {% elif msg %}
+    <h3>{{ msg }}</h3>
+    {% endif %}
+</form>
+{% endblock %}
+</body>
+</html>
