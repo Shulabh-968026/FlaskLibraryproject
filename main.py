@@ -7,15 +7,15 @@ mail=Mail(app)
 app.secret_key='super user key'
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'shulabhdixit143@gmail.com'
-app.config['MAIL_PASSWORD'] = 'ankita9680'
+app.config['MAIL_USERNAME'] = 'user@gmail.com'
+app.config['MAIL_PASSWORD'] = 'user'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 @app.route("/index")
 def index(em):
-   msg = Message('Hello', sender = 'shulabhdixit143@gmail.com', recipients = ['em'])
-   msg.body = "thankyou for joining for world largest library site.we hope you injoy it.if you enjoy please  reply chaddaji "
+   msg = Message('Hello', sender = 'senderemail', recipients = ['recevieremial'])
+   msg.body = "thankyou for joining for world largest library site.we hope you injoy it. "
    mail.send(msg)
    return render_template('addlibrarian.html', msg='data is successfully inserted')
 
